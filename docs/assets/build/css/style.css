@@ -1061,19 +1061,19 @@ body {
   }
 }
 
-.size-xxl {
+.size-xxl, .intro h1 {
   font-size: 8.5rem;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.3rem;
 }
 @media (max-width: 1199.98px) {
-  .size-xxl {
+  .size-xxl, .intro h1 {
     font-size: 8.5rem;
   }
 }
 @media (max-width: 991.98px) {
-  .size-xxl {
+  .size-xxl, .intro h1 {
     font-size: 2.5rem;
     letter-spacing: -0.1rem;
     font-weight: 700;
@@ -1223,16 +1223,52 @@ h2 {
   font-weight: 700;
 }
 
-a {
-  transition: all 0.2s;
-}
-a:not([href]):not([class]) {
-  color: #E5E5E5;
-}
-a:not([href]):not([class]):hover {
-  color: #E5E5E5;
+@-webkit-keyframes introAnimation {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  70% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
+@keyframes introAnimation {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  70% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.intro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 4vw;
+  top: 0;
+  left: 0;
+  background-color: #f8f8f8;
+  z-index: 1001;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: introAnimation 2.5s ease;
+          animation: introAnimation 2.5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
 .background {
   background-color: #f8f8f8;
   position: fixed;
@@ -1254,16 +1290,29 @@ a:not([href]):not([class]):hover {
   min-height: 100%;
 }
 
+a {
+  transition: all 0.2s;
+}
+a:not([href]):not([class]) {
+  color: #E5E5E5;
+}
+a:not([href]):not([class]):hover {
+  color: #E5E5E5;
+}
+
 footer, header.home-header {
   padding: 2rem 0;
 }
 footer svg, header.home-header svg {
-  width: 2rem;
-  height: auto;
+  width: auto;
+  height: 7.66rem;
 }
 @media (max-width: 991.98px) {
+  footer, header.home-header {
+    padding: 1.5rem 0;
+  }
   footer svg, header.home-header svg {
-    width: 1.5rem;
+    height: 5.745rem;
   }
 }
 
@@ -1292,12 +1341,13 @@ header.page-header {
 }
 header .about-name {
   position: fixed;
-  right: 5.4rem;
+  left: 5.4rem;
   top: 1.4rem;
 }
 @media (max-width: 991.98px) {
   header .about-name {
     top: 0.9rem;
+    left: auto;
     right: calc(5.4vw + 3.5rem);
   }
 }
@@ -1327,6 +1377,11 @@ footer {
 }
 footer path, footer rect {
   fill: #f8f8f8;
+}
+@media (max-width: 575.98px) {
+  footer svg {
+    margin-bottom: 2rem;
+  }
 }
 
 .next-section {
@@ -1471,6 +1526,11 @@ footer path, footer rect {
   align-items: center;
 }
 
+@media (min-width: 992px) {
+  .menu-body {
+    padding-left: 9%;
+  }
+}
 @media (max-width: 991.98px) {
   .menu-sidebar {
     height: 100%;
@@ -1567,7 +1627,7 @@ footer path, footer rect {
 @media (max-width: 991.98px) {
   #content {
     padding-top: 4.5rem;
-    min-height: calc(100% - 19.25rem);
+    min-height: calc(100% - 17.75rem);
   }
 }
 
@@ -1578,7 +1638,7 @@ footer path, footer rect {
 @media (max-width: 991.98px) {
   #content-toc {
     padding-top: 4.5rem;
-    min-height: calc(100% - 12.75rem);
+    min-height: calc(100% - 12.25rem);
   }
 }
 
