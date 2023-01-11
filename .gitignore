@@ -1,5 +1,5 @@
-gulpfile.js
-package.json
-package-lock.json
-node_modules/
-assets/src/
+/docs/gulpfile.js
+/docs/package.json
+/docs/package-lock.json
+/docs/node_modules/
+/docs/assets/src/
