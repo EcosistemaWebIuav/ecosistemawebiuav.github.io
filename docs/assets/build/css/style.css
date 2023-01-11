@@ -1301,6 +1301,9 @@ h2 {
   min-width: 100%;
   min-height: 100%;
 }
+.background svg text {
+  font-family: "Inter", "InterR", sans-serif;
+}
 
 a {
   transition: all 0.2s;
