@@ -6,13 +6,13 @@
 }
 @font-face {
   font-family: "InterR";
-  src: url("../fonts/Inter-Regular-slnt=0.ttf") format("ttf");
+  src: url("../fonts/Inter-Regular-slnt=0.ttf");
   font-weight: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "InterR";
-  src: url("../fonts/Inter-Bold-slnt=0.ttf") format("ttf");
+  src: url("../fonts/Inter-Bold-slnt=0.ttf");
   font-weight: bold;
   font-display: swap;
 }
